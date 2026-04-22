@@ -53,13 +53,29 @@ Near-term quantum devices are limited by noise and short coherence times. Effici
 ## Sample Outputs
 
 ### Deutsch–Jozsa Results
-![DJ Results](deutsch_jozsa/dj_results.png)
+
+| Qubits | Oracle Type | Output | Depth | Optimized Depth | CNOT Gates | Hadamard Gates |
+|--------|------------|--------|-------|-----------------|------------|----------------|
+| 3      | Constant   | 00     | 4     | 3               | 0          | 5              |
+| 3      | Balanced   | 11     | 6     | 5               | 2          | 5              |
+| 4      | Constant   | 000    | 4     | 3               | 0          | 7              |
+| 4      | Balanced   | 111    | 7     | 6               | 3          | 7              |
+| 5      | Constant   | 0000   | 4     | 3               | 0          | 9              |
+| 5      | Balanced   | 1111   | 8     | 7               | 4          | 9              |
 
 ### QFT Analysis
-![QFT Results](qft/qft_results.png)
 
-### Circuit Depth Comparison
-![Depth](results/depth_comparison.png)
+| Qubits | Version            | Depth | Optimized Depth | Hadamard (H) | Phase (CP) | SWAP |
+|--------|-------------------|-------|-----------------|--------------|------------|------|
+| 3      | Standard QFT      | 7     | 5               | 6            | 3          | 1    |
+| 3      | No-SWAP QFT       | 6     | 5               | 6            | 3          | 0    |
+| 3      | Approximate QFT   | 6     | 5               | 6            | 3          | 0    |
+| 4      | Standard QFT      | 9     | 7               | 8            | 6          | 2    |
+| 4      | No-SWAP QFT       | 8     | 7               | 8            | 6          | 0    |
+| 4      | Approximate QFT   | 8     | 7               | 8            | 5          | 0    |
+| 5      | Standard QFT      | 11    | 9               | 10           | 10         | 2    |
+| 5      | No-SWAP QFT       | 10    | 9               | 10           | 10         | 0    |
+| 5      | Approximate QFT   | 10    | 9               | 10           | 7          | 0    |
 
 ---
 
