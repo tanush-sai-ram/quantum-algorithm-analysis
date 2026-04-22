@@ -1,4 +1,4 @@
-# quantum-algorithm-analysis
+# Quantum Circuit Optimization using Qiskit
 
 ## Overview
 This repository explores the implementation and analysis of key quantum algorithms, including the Deutsch–Jozsa algorithm and the Quantum Fourier Transform (QFT), using Qiskit.
